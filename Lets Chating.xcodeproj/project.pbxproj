@@ -9,13 +9,38 @@
 /* Begin PBXBuildFile section */
 		726CB92E29F794A4003A6B5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB92D29F794A4003A6B5D /* AppDelegate.swift */; };
 		726CB93029F794A4003A6B5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB92F29F794A4003A6B5D /* SceneDelegate.swift */; };
-		726CB93229F794A4003A6B5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB93129F794A4003A6B5D /* ViewController.swift */; };
-		726CB93529F794A4003A6B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726CB93329F794A4003A6B5D /* Main.storyboard */; };
 		726CB93729F794A7003A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726CB93629F794A7003A6B5D /* Assets.xcassets */; };
 		726CB93A29F794A7003A6B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 726CB93829F794A7003A6B5D /* LaunchScreen.storyboard */; };
 		726CB94529F794A7003A6B5D /* Lets_ChatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB94429F794A7003A6B5D /* Lets_ChatingTests.swift */; };
 		726CB94F29F794A7003A6B5D /* Lets_ChatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB94E29F794A7003A6B5D /* Lets_ChatingUITests.swift */; };
 		726CB95129F794A7003A6B5D /* Lets_ChatingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB95029F794A7003A6B5D /* Lets_ChatingUITestsLaunchTests.swift */; };
+		726CB95E29F79517003A6B5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 726CB95D29F79517003A6B5D /* GoogleService-Info.plist */; };
+		726CB96729F79609003A6B5D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB96529F79609003A6B5D /* LoginVC.swift */; };
+		726CB96829F79609003A6B5D /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726CB96629F79609003A6B5D /* LoginVC.xib */; };
+		726CB96A29F798CA003A6B5D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB96929F798CA003A6B5D /* CustomButton.swift */; };
+		726CB96E29F79DF2003A6B5D /* PasswordTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB96D29F79DF2003A6B5D /* PasswordTF.swift */; };
+		726CB97429F7A171003A6B5D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB97329F7A171003A6B5D /* UIViewControllerExtensions.swift */; };
+		726CB97829F7A5AF003A6B5D /* ConversationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB97629F7A5AF003A6B5D /* ConversationVC.swift */; };
+		726CB97929F7A5AF003A6B5D /* ConversationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726CB97729F7A5AF003A6B5D /* ConversationVC.xib */; };
+		726CB97C29F7AC53003A6B5D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 726CB97B29F7AC53003A6B5D /* IQKeyboardManagerSwift */; };
+		726CB98029F7AD6E003A6B5D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB97E29F7AD6E003A6B5D /* ChatCell.swift */; };
+		726CB98129F7AD6E003A6B5D /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726CB97F29F7AD6E003A6B5D /* ChatCell.xib */; };
+		726CB98329F7AE56003A6B5D /* TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB98229F7AE56003A6B5D /* TableExtension.swift */; };
+		726CB98A29F7BECB003A6B5D /* CreateAccVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB98829F7BECB003A6B5D /* CreateAccVC.swift */; };
+		726CB98B29F7BECB003A6B5D /* CreateAccVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726CB98929F7BECB003A6B5D /* CreateAccVC.xib */; };
+		726CB98D29F7C3CD003A6B5D /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB98C29F7C3CD003A6B5D /* CustomView.swift */; };
+		726CB99829F7CE63003A6B5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB99729F7CE63003A6B5D /* User.swift */; };
+		726CB99C29F7DC1E003A6B5D /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726CB99A29F7DC1E003A6B5D /* FriendsVC.swift */; };
+		726CB99D29F7DC1E003A6B5D /* FriendsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726CB99B29F7DC1E003A6B5D /* FriendsVC.xib */; };
+		726CB9AA29F7ED55003A6B5D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 726CB9A929F7ED55003A6B5D /* FirebaseAnalytics */; };
+		726CB9AC29F7ED55003A6B5D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 726CB9AB29F7ED55003A6B5D /* FirebaseAuth */; };
+		726CB9AE29F7ED55003A6B5D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 726CB9AD29F7ED55003A6B5D /* FirebaseDatabase */; };
+		726CB9B029F7ED55003A6B5D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 726CB9AF29F7ED55003A6B5D /* FirebaseFirestore */; };
+		726CB9B229F7ED55003A6B5D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 726CB9B129F7ED55003A6B5D /* FirebaseStorage */; };
+		72A1ADFF29FFB81C0093FEF1 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A1ADFD29FFB81C0093FEF1 /* HomePage.swift */; };
+		72A1AE0029FFB81C0093FEF1 /* HomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A1ADFE29FFB81C0093FEF1 /* HomePage.xib */; };
+		72A1AE0429FFC7060093FEF1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A1AE0229FFC7060093FEF1 /* ProfileVC.swift */; };
+		72A1AE0529FFC7060093FEF1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A1AE0329FFC7060093FEF1 /* ProfileVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +64,6 @@
 		726CB92A29F794A4003A6B5D /* Lets Chating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lets Chating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726CB92D29F794A4003A6B5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		726CB92F29F794A4003A6B5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		726CB93129F794A4003A6B5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		726CB93429F794A4003A6B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		726CB93629F794A7003A6B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		726CB93929F794A7003A6B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		726CB93B29F794A7003A6B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +72,27 @@
 		726CB94A29F794A7003A6B5D /* Lets ChatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lets ChatingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726CB94E29F794A7003A6B5D /* Lets_ChatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lets_ChatingUITests.swift; sourceTree = "<group>"; };
 		726CB95029F794A7003A6B5D /* Lets_ChatingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lets_ChatingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		726CB95D29F79517003A6B5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		726CB96529F79609003A6B5D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		726CB96629F79609003A6B5D /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		726CB96929F798CA003A6B5D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		726CB96D29F79DF2003A6B5D /* PasswordTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTF.swift; sourceTree = "<group>"; };
+		726CB97329F7A171003A6B5D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		726CB97629F7A5AF003A6B5D /* ConversationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationVC.swift; sourceTree = "<group>"; };
+		726CB97729F7A5AF003A6B5D /* ConversationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationVC.xib; sourceTree = "<group>"; };
+		726CB97E29F7AD6E003A6B5D /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		726CB97F29F7AD6E003A6B5D /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		726CB98229F7AE56003A6B5D /* TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtension.swift; sourceTree = "<group>"; };
+		726CB98829F7BECB003A6B5D /* CreateAccVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccVC.swift; sourceTree = "<group>"; };
+		726CB98929F7BECB003A6B5D /* CreateAccVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccVC.xib; sourceTree = "<group>"; };
+		726CB98C29F7C3CD003A6B5D /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		726CB99729F7CE63003A6B5D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		726CB99A29F7DC1E003A6B5D /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		726CB99B29F7DC1E003A6B5D /* FriendsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsVC.xib; sourceTree = "<group>"; };
+		72A1ADFD29FFB81C0093FEF1 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		72A1ADFE29FFB81C0093FEF1 /* HomePage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePage.xib; sourceTree = "<group>"; };
+		72A1AE0229FFC7060093FEF1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		72A1AE0329FFC7060093FEF1 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +100,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726CB9AA29F7ED55003A6B5D /* FirebaseAnalytics in Frameworks */,
+				726CB9AC29F7ED55003A6B5D /* FirebaseAuth in Frameworks */,
+				726CB9AE29F7ED55003A6B5D /* FirebaseDatabase in Frameworks */,
+				726CB9B029F7ED55003A6B5D /* FirebaseFirestore in Frameworks */,
+				726CB97C29F7AC53003A6B5D /* IQKeyboardManagerSwift in Frameworks */,
+				726CB9B229F7ED55003A6B5D /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +149,13 @@
 		726CB92C29F794A4003A6B5D /* Lets Chating */ = {
 			isa = PBXGroup;
 			children = (
-				726CB92D29F794A4003A6B5D /* AppDelegate.swift */,
-				726CB92F29F794A4003A6B5D /* SceneDelegate.swift */,
-				726CB93129F794A4003A6B5D /* ViewController.swift */,
-				726CB93329F794A4003A6B5D /* Main.storyboard */,
-				726CB93629F794A7003A6B5D /* Assets.xcassets */,
-				726CB93829F794A7003A6B5D /* LaunchScreen.storyboard */,
+				726CB97229F7A152003A6B5D /* Scense */,
+				726CB97129F7A117003A6B5D /* Assets */,
+				726CB97029F7A103003A6B5D /* Host */,
+				726CB96F29F7A0EA003A6B5D /* Extensions */,
 				726CB93B29F794A7003A6B5D /* Info.plist */,
+				726CB95D29F79517003A6B5D /* GoogleService-Info.plist */,
+				726CB99729F7CE63003A6B5D /* User.swift */,
 			);
 			path = "Lets Chating";
 			sourceTree = "<group>";
@@ -127,6 +177,113 @@
 			path = "Lets ChatingUITests";
 			sourceTree = "<group>";
 		};
+		726CB96429F795C2003A6B5D /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				726CB96529F79609003A6B5D /* LoginVC.swift */,
+				726CB96629F79609003A6B5D /* LoginVC.xib */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		726CB96F29F7A0EA003A6B5D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				726CB96929F798CA003A6B5D /* CustomButton.swift */,
+				726CB96D29F79DF2003A6B5D /* PasswordTF.swift */,
+				726CB97329F7A171003A6B5D /* UIViewControllerExtensions.swift */,
+				726CB98229F7AE56003A6B5D /* TableExtension.swift */,
+				726CB98C29F7C3CD003A6B5D /* CustomView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		726CB97029F7A103003A6B5D /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				726CB93829F794A7003A6B5D /* LaunchScreen.storyboard */,
+				726CB92F29F794A4003A6B5D /* SceneDelegate.swift */,
+				726CB92D29F794A4003A6B5D /* AppDelegate.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		726CB97129F7A117003A6B5D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				726CB93629F794A7003A6B5D /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		726CB97229F7A152003A6B5D /* Scense */ = {
+			isa = PBXGroup;
+			children = (
+				72A1ADFC29FFB7EC0093FEF1 /* HomePageTabBar */,
+				72A1AE0129FFC6EA0093FEF1 /* ProfileVC */,
+				726CB99929F7DBFF003A6B5D /* FriendsPageVC */,
+				726CB97529F7A576003A6B5D /* ConversationVC */,
+				726CB98729F7BEAC003A6B5D /* CreateAccVC */,
+				726CB96429F795C2003A6B5D /* LoginVC */,
+			);
+			path = Scense;
+			sourceTree = "<group>";
+		};
+		726CB97529F7A576003A6B5D /* ConversationVC */ = {
+			isa = PBXGroup;
+			children = (
+				726CB97D29F7AD49003A6B5D /* ChatCell */,
+				726CB97629F7A5AF003A6B5D /* ConversationVC.swift */,
+				726CB97729F7A5AF003A6B5D /* ConversationVC.xib */,
+			);
+			path = ConversationVC;
+			sourceTree = "<group>";
+		};
+		726CB97D29F7AD49003A6B5D /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				726CB97E29F7AD6E003A6B5D /* ChatCell.swift */,
+				726CB97F29F7AD6E003A6B5D /* ChatCell.xib */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
+		726CB98729F7BEAC003A6B5D /* CreateAccVC */ = {
+			isa = PBXGroup;
+			children = (
+				726CB98829F7BECB003A6B5D /* CreateAccVC.swift */,
+				726CB98929F7BECB003A6B5D /* CreateAccVC.xib */,
+			);
+			path = CreateAccVC;
+			sourceTree = "<group>";
+		};
+		726CB99929F7DBFF003A6B5D /* FriendsPageVC */ = {
+			isa = PBXGroup;
+			children = (
+				726CB99A29F7DC1E003A6B5D /* FriendsVC.swift */,
+				726CB99B29F7DC1E003A6B5D /* FriendsVC.xib */,
+			);
+			path = FriendsPageVC;
+			sourceTree = "<group>";
+		};
+		72A1ADFC29FFB7EC0093FEF1 /* HomePageTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				72A1ADFD29FFB81C0093FEF1 /* HomePage.swift */,
+				72A1ADFE29FFB81C0093FEF1 /* HomePage.xib */,
+			);
+			path = HomePageTabBar;
+			sourceTree = "<group>";
+		};
+		72A1AE0129FFC6EA0093FEF1 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				72A1AE0229FFC7060093FEF1 /* ProfileVC.swift */,
+				72A1AE0329FFC7060093FEF1 /* ProfileVC.xib */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +300,14 @@
 			dependencies = (
 			);
 			name = "Lets Chating";
+			packageProductDependencies = (
+				726CB97B29F7AC53003A6B5D /* IQKeyboardManagerSwift */,
+				726CB9A929F7ED55003A6B5D /* FirebaseAnalytics */,
+				726CB9AB29F7ED55003A6B5D /* FirebaseAuth */,
+				726CB9AD29F7ED55003A6B5D /* FirebaseDatabase */,
+				726CB9AF29F7ED55003A6B5D /* FirebaseFirestore */,
+				726CB9B129F7ED55003A6B5D /* FirebaseStorage */,
+			);
 			productName = "Lets Chating";
 			productReference = 726CB92A29F794A4003A6B5D /* Lets Chating.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +380,10 @@
 				Base,
 			);
 			mainGroup = 726CB92129F794A4003A6B5D;
+			packageReferences = (
+				726CB97A29F7AC53003A6B5D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 726CB92B29F794A4003A6B5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +400,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A1AE0029FFB81C0093FEF1 /* HomePage.xib in Resources */,
+				726CB98B29F7BECB003A6B5D /* CreateAccVC.xib in Resources */,
+				726CB96829F79609003A6B5D /* LoginVC.xib in Resources */,
+				726CB99D29F7DC1E003A6B5D /* FriendsVC.xib in Resources */,
+				72A1AE0529FFC7060093FEF1 /* ProfileVC.xib in Resources */,
+				726CB98129F7AD6E003A6B5D /* ChatCell.xib in Resources */,
 				726CB93A29F794A7003A6B5D /* LaunchScreen.storyboard in Resources */,
+				726CB97929F7A5AF003A6B5D /* ConversationVC.xib in Resources */,
+				726CB95E29F79517003A6B5D /* GoogleService-Info.plist in Resources */,
 				726CB93729F794A7003A6B5D /* Assets.xcassets in Resources */,
-				726CB93529F794A4003A6B5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +434,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				726CB93229F794A4003A6B5D /* ViewController.swift in Sources */,
+				72A1AE0429FFC7060093FEF1 /* ProfileVC.swift in Sources */,
+				726CB96E29F79DF2003A6B5D /* PasswordTF.swift in Sources */,
+				726CB98329F7AE56003A6B5D /* TableExtension.swift in Sources */,
+				726CB98029F7AD6E003A6B5D /* ChatCell.swift in Sources */,
+				726CB97829F7A5AF003A6B5D /* ConversationVC.swift in Sources */,
 				726CB92E29F794A4003A6B5D /* AppDelegate.swift in Sources */,
+				72A1ADFF29FFB81C0093FEF1 /* HomePage.swift in Sources */,
+				726CB96729F79609003A6B5D /* LoginVC.swift in Sources */,
+				726CB98D29F7C3CD003A6B5D /* CustomView.swift in Sources */,
 				726CB93029F794A4003A6B5D /* SceneDelegate.swift in Sources */,
+				726CB99829F7CE63003A6B5D /* User.swift in Sources */,
+				726CB97429F7A171003A6B5D /* UIViewControllerExtensions.swift in Sources */,
+				726CB98A29F7BECB003A6B5D /* CreateAccVC.swift in Sources */,
+				726CB99C29F7DC1E003A6B5D /* FriendsVC.swift in Sources */,
+				726CB96A29F798CA003A6B5D /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +485,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		726CB93329F794A4003A6B5D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				726CB93429F794A4003A6B5D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		726CB93829F794A7003A6B5D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +621,6 @@
 				INFOPLIST_FILE = "Lets Chating/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +647,6 @@
 				INFOPLIST_FILE = "Lets Chating/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +774,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		726CB97A29F7AC53003A6B5D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		726CB97B29F7AC53003A6B5D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 726CB97A29F7AC53003A6B5D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		726CB9A929F7ED55003A6B5D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		726CB9AB29F7ED55003A6B5D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		726CB9AD29F7ED55003A6B5D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		726CB9AF29F7ED55003A6B5D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		726CB9B129F7ED55003A6B5D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 726CB92229F794A4003A6B5D /* Project object */;
 }
