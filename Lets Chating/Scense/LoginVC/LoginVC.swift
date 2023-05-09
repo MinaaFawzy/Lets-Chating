@@ -1,6 +1,6 @@
 import UIKit
 import FirebaseAuth
-
+import JGProgressHUD
 
 class LoginVC: UIViewController {
 
@@ -8,8 +8,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passTF: UITextField!
 
    
+    private let spinner = JGProgressHUD(style: .dark)
     
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         emailTF.delegate = self
         passTF.delegate = self
@@ -27,8 +28,10 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func LoginButtonPressed(_ sender: Any) {
+        spinner.show(in: view)
         if emailTF.text != "" && passTF.text != "" {
-                login(email: emailTF.text!, pass: passTF.text!)
+           
+            login(email: emailTF.text!, pass: passTF.text!)
         } else {
             basicAlert(title: "Error", message: "Please Enter e-mail or password ", ButtonTitle: "Ok")
         }
@@ -36,14 +39,18 @@ class LoginVC: UIViewController {
     
     
     func login(email: String, pass: String) {
+       
         Auth.auth().signIn(withEmail: email, password: pass){ authResult, error in
             if authResult != nil {
                 let token = authResult!.user.uid
                 UserDefaults.standard.setValue(token, forKey: "token")
+                UserDefaults.standard.setValue(email, forKey: "email")
                 Auth.auth().addStateDidChangeListener { result, user in
+                    
                     let vc = HomePage()
                     self.navigationController?.setViewControllers([vc], animated: true)
                 }
+                self.spinner.dismiss(animated: true)
             } else {
                 self.basicAlert(title: "Login Filed", message: error?.localizedDescription, ButtonTitle: "Ok")
             }

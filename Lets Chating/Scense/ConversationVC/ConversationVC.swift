@@ -32,12 +32,21 @@ class ConversationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 extension ConversationVC {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue() as ChatCell
+        cell.userNameL.text = "Hello World"
+        cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = ChatVC()
+        vc.title = "Sender name"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

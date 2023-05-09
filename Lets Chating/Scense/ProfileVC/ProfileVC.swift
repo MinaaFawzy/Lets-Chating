@@ -8,11 +8,12 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
-
+import JGProgressHUD
 
 class ProfileVC: UIViewController {
 
     let db = Firestore.firestore()
+    private let spinner = JGProgressHUD(style: .dark)
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var email: UILabel!
@@ -25,10 +26,33 @@ class ProfileVC: UIViewController {
         userImage.layer.borderColor = UIColor.lightGray.cgColor
         userImage.layer.borderWidth = 1
         
+        getData()
+        
         let gesture = UITapGestureRecognizer(target: self, action: #selector(userPictureSelected))
         userImage.addGestureRecognizer(gesture)
     }
-    override func viewWillLayoutSubviews() {
+    
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        spinner.show(in: view)
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.setValue(nil, forKey: "token")
+            UserDefaults.standard.setValue(nil, forKey: "email")
+            UserDefaults.standard.setValue(nil, forKey: "profilePicture")
+        } catch {
+            self.basicAlert(title: "Error", message: "Filed to Logout", ButtonTitle: "Ok")
+        }
+        spinner.dismiss(animated: true)
+        let VC = LoginVC()
+        navigationController?.setViewControllers([VC], animated: true)
+    }
+    @objc func userPictureSelected() {
+        changeProfilePictureAlert()
+    }
+    
+    func getData() {
+        spinner.show(in: view)
+        getProfilePicture()
         db.collection("users").document("\(Auth.auth().currentUser!.uid)").getDocument { snapshot, error in
             guard let userInfo = snapshot?.data() else {
                 return
@@ -37,23 +61,41 @@ class ProfileVC: UIViewController {
             self.email.text = userInfo["email"] as? String
             self.phoneNum.text = userInfo["phoneNum"] as? String
         }
+       
+        
     }
     
-    @IBAction func logOutButtonPressed(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            UserDefaults.standard.setValue(nil, forKey: "token")
-        } catch {
-            self.basicAlert(title: "Error", message: "Filed to Logout", ButtonTitle: "Ok")
+    func getProfilePicture() {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
         }
-        let VC = LoginVC()
-        navigationController?.setViewControllers([VC], animated: true)
+        let safeEmail = User.safeEmail(email: email)
+        let path = "/image/\(safeEmail)_profile_picture.png"
+        StorageManager.shared.downloadProfilePicture(path: path) { [weak self ]result in
+            switch result {
+            case .success(let imageURL):
+                self?.downloadProfileImage(myImage: (self?.userImage)!, imageUrl: imageURL)
+            case.failure(let error):
+                print(error)
+            }
+        }
+        
     }
-    @objc func userPictureSelected() {
-        changeProfilePictureAlert()
-    }
+    
+    func downloadProfileImage(myImage: UIImageView, imageUrl: URL ) {
+        URLSession.shared.dataTask(with: imageUrl, completionHandler:{ data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                myImage.image = image
+                self.spinner.dismiss(animated: true)
+            }
+        }).resume()
 
-   
+    }
+    
 }
 
 extension ProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

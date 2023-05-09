@@ -5,7 +5,7 @@
 //  Created by Mo0oN on 25/04/2023.
 //
 
-import UIKit
+import UIKit	
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,10 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var VC: UIViewController!
         if UserDefaults.standard.value(forKey: "token") != nil {
             VC = HomePage()
-            print("token != nil")
         } else {
             VC = LoginVC()
-            print("token == nil")
         }
         let navController = UINavigationController(rootViewController: VC)
         self.window = UIWindow(windowScene: winScene)

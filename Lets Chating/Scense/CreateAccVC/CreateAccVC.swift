@@ -73,7 +73,22 @@ extension CreateAccVC {
     func signup(userName: String, email: String, password: String, phoneNum: String) {
         Auth.auth().createUser(withEmail: email, password: password) { [self] authResult, error in
             if authResult != nil {
+                guard let image = self.userImage.image,
+                      let data = image.pngData() else{
+                            return
+                }
+                
                 let newUser = User(id: (authResult?.user.uid)!, userName: userName, email: email, phoneNum: phoneNum)
+                let fileName = newUser.profilePicFileName
+                StorageManager.shared.uploadProfilePicture(data: data, fileName: fileName) { result in
+                    switch result {
+                    case .success(let URLDownload):
+                        UserDefaults.standard.setValue(URLDownload, forKey: "profilePicture")
+                        print(URLDownload)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
                 self.db.collection("users").document((authResult?.user.uid)!).setData(newUser.toAnyObject() as! [String : Any])
                 self.navigationController?.pushViewController(LoginVC(), animated: true)
                 self.basicAlert(title: "Creat Account Successfuly", message: nil, ButtonTitle: "Ok")

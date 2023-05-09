@@ -3,11 +3,27 @@ import FirebaseDatabase
 
 struct User {
     let ref: DatabaseReference?
-    let id: String
-    let userName: String
-    let email: String
-    let phoneNum: String
+    var id: String
+    var userName: String
+    var email: String
+    var phoneNum: String
     
+    var safeEmail: String {
+        var safeEmail = email.replacingOccurrences(of: "@", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: ".", with: "-")
+        return safeEmail
+    }
+    var profilePicFileName: String {
+        return "\(safeEmail)_profile_picture.png"
+    }
+        
+    init (){
+        ref = nil
+        id = ""
+        userName = ""
+        email = ""
+        phoneNum = ""
+    }
     init(id: String, userName: String, email: String,phoneNum: String){
         self.ref = nil
         self.id = id
@@ -38,5 +54,10 @@ struct User {
             "email" : email,
             "phoneNum" : phoneNum
         ]
-    }	
+    }
+    static func safeEmail(email: String)-> String {
+        var safeEmail = email.replacingOccurrences(of: "@", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: ".", with: "-")
+        return safeEmail
+    }
 }

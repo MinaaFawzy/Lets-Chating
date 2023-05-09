@@ -9,11 +9,13 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseFirestore
+import JGProgressHUD
 
 class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet weak var friendsTable: UITableView!
    
+    let spinner = JGProgressHUD(style: .dark)
     let db  = Firestore.firestore()
     var friends:[User] = []
     override func viewDidLoad() {
@@ -70,6 +72,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func getFriends() {
+        spinner.show(in: view)
         db.collection("users").document("\(Auth.auth().currentUser!.uid)").collection("friends").getDocuments { [self] snapshot, error in
             if snapshot != nil {
                 for friend in snapshot!.documents {
@@ -79,13 +82,16 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                         userName: temp!["userName"] as! String,
                                         email: temp!["email"] as! String,
                                         phoneNum: temp!["phoneNum"] as! String)
+                        
                         self.friends.append(user)
                         self.friendsTable.reloadData()
                     }
                 }
             }
         }
+        spinner.dismiss(animated: true)
     }
+    
 }
 
 //MARK: - table Extension
@@ -96,7 +102,7 @@ extension FriendsVC {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue() as ChatCell
-        cell.userNameL.text = friends[indexPath.row].userName
+        cell.setData(userInfo: friends[indexPath.row])
         return cell
         
     }

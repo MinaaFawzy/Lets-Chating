@@ -41,6 +41,13 @@
 		72A1AE0029FFB81C0093FEF1 /* HomePage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A1ADFE29FFB81C0093FEF1 /* HomePage.xib */; };
 		72A1AE0429FFC7060093FEF1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A1AE0229FFC7060093FEF1 /* ProfileVC.swift */; };
 		72A1AE0529FFC7060093FEF1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A1AE0329FFC7060093FEF1 /* ProfileVC.xib */; };
+		72FEF97C2A0A580E0053CA8D /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72FEF97B2A0A580E0053CA8D /* MessageKit */; };
+		72FEF97F2A0A58650053CA8D /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 72FEF97E2A0A58650053CA8D /* JGProgressHUD */; };
+		72FEF9822A0A592A0053CA8D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 72FEF9812A0A592A0053CA8D /* SDWebImage */; };
+		72FEF9842A0A592A0053CA8D /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72FEF9832A0A592A0053CA8D /* SDWebImageMapKit */; };
+		72FEF9882A0A5E180053CA8D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEF9862A0A5E180053CA8D /* ChatVC.swift */; };
+		72FEF9892A0A5E180053CA8D /* ChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72FEF9872A0A5E180053CA8D /* ChatVC.xib */; };
+		72FEF98B2A0A69D20053CA8D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEF98A2A0A69D20053CA8D /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +100,9 @@
 		72A1ADFE29FFB81C0093FEF1 /* HomePage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePage.xib; sourceTree = "<group>"; };
 		72A1AE0229FFC7060093FEF1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		72A1AE0329FFC7060093FEF1 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		72FEF9862A0A5E180053CA8D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		72FEF9872A0A5E180053CA8D /* ChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVC.xib; sourceTree = "<group>"; };
+		72FEF98A2A0A69D20053CA8D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +113,11 @@
 				726CB9AA29F7ED55003A6B5D /* FirebaseAnalytics in Frameworks */,
 				726CB9AC29F7ED55003A6B5D /* FirebaseAuth in Frameworks */,
 				726CB9AE29F7ED55003A6B5D /* FirebaseDatabase in Frameworks */,
+				72FEF97C2A0A580E0053CA8D /* MessageKit in Frameworks */,
+				72FEF97F2A0A58650053CA8D /* JGProgressHUD in Frameworks */,
 				726CB9B029F7ED55003A6B5D /* FirebaseFirestore in Frameworks */,
+				72FEF9842A0A592A0053CA8D /* SDWebImageMapKit in Frameworks */,
+				72FEF9822A0A592A0053CA8D /* SDWebImage in Frameworks */,
 				726CB97C29F7AC53003A6B5D /* IQKeyboardManagerSwift in Frameworks */,
 				726CB9B229F7ED55003A6B5D /* FirebaseStorage in Frameworks */,
 			);
@@ -156,6 +170,7 @@
 				726CB93B29F794A7003A6B5D /* Info.plist */,
 				726CB95D29F79517003A6B5D /* GoogleService-Info.plist */,
 				726CB99729F7CE63003A6B5D /* User.swift */,
+				72FEF98A2A0A69D20053CA8D /* StorageManager.swift */,
 			);
 			path = "Lets Chating";
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 		726CB97229F7A152003A6B5D /* Scense */ = {
 			isa = PBXGroup;
 			children = (
+				72FEF9852A0A5DFE0053CA8D /* ChatVC */,
 				72A1ADFC29FFB7EC0093FEF1 /* HomePageTabBar */,
 				72A1AE0129FFC6EA0093FEF1 /* ProfileVC */,
 				726CB99929F7DBFF003A6B5D /* FriendsPageVC */,
@@ -284,6 +300,15 @@
 			path = ProfileVC;
 			sourceTree = "<group>";
 		};
+		72FEF9852A0A5DFE0053CA8D /* ChatVC */ = {
+			isa = PBXGroup;
+			children = (
+				72FEF9862A0A5E180053CA8D /* ChatVC.swift */,
+				72FEF9872A0A5E180053CA8D /* ChatVC.xib */,
+			);
+			path = ChatVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +332,10 @@
 				726CB9AD29F7ED55003A6B5D /* FirebaseDatabase */,
 				726CB9AF29F7ED55003A6B5D /* FirebaseFirestore */,
 				726CB9B129F7ED55003A6B5D /* FirebaseStorage */,
+				72FEF97B2A0A580E0053CA8D /* MessageKit */,
+				72FEF97E2A0A58650053CA8D /* JGProgressHUD */,
+				72FEF9812A0A592A0053CA8D /* SDWebImage */,
+				72FEF9832A0A592A0053CA8D /* SDWebImageMapKit */,
 			);
 			productName = "Lets Chating";
 			productReference = 726CB92A29F794A4003A6B5D /* Lets Chating.app */;
@@ -383,6 +412,9 @@
 			packageReferences = (
 				726CB97A29F7AC53003A6B5D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				72FEF97A2A0A580D0053CA8D /* XCRemoteSwiftPackageReference "MessageKit" */,
+				72FEF97D2A0A58650053CA8D /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				72FEF9802A0A592A0053CA8D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 726CB92B29F794A4003A6B5D /* Products */;
 			projectDirPath = "";
@@ -408,6 +440,7 @@
 				726CB98129F7AD6E003A6B5D /* ChatCell.xib in Resources */,
 				726CB93A29F794A7003A6B5D /* LaunchScreen.storyboard in Resources */,
 				726CB97929F7A5AF003A6B5D /* ConversationVC.xib in Resources */,
+				72FEF9892A0A5E180053CA8D /* ChatVC.xib in Resources */,
 				726CB95E29F79517003A6B5D /* GoogleService-Info.plist in Resources */,
 				726CB93729F794A7003A6B5D /* Assets.xcassets in Resources */,
 			);
@@ -434,6 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FEF98B2A0A69D20053CA8D /* StorageManager.swift in Sources */,
+				72FEF9882A0A5E180053CA8D /* ChatVC.swift in Sources */,
 				72A1AE0429FFC7060093FEF1 /* ProfileVC.swift in Sources */,
 				726CB96E29F79DF2003A6B5D /* PasswordTF.swift in Sources */,
 				726CB98329F7AE56003A6B5D /* TableExtension.swift in Sources */,
@@ -792,6 +827,31 @@
 				version = 9.6.0;
 			};
 		};
+		72FEF97A2A0A580D0053CA8D /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		72FEF97D2A0A58650053CA8D /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		72FEF9802A0A592A0053CA8D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -824,6 +884,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 726CB9A829F7ED55003A6B5D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		72FEF97B2A0A580E0053CA8D /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72FEF97A2A0A580D0053CA8D /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+		72FEF97E2A0A58650053CA8D /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72FEF97D2A0A58650053CA8D /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+		72FEF9812A0A592A0053CA8D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72FEF9802A0A592A0053CA8D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		72FEF9832A0A592A0053CA8D /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72FEF9802A0A592A0053CA8D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
